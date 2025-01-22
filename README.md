@@ -8,7 +8,7 @@ Le noyau est simpliste. Il est démarré par Grub, en mode protégé en 32 bits,
 
 # Quick start guide
 
-## Installation et dépendences
+## Installation et dépendances
 
 L'environnement de déploiement s'appuyant sur QEMU, il est nécessaire
 d'installer les paquets suivants :
@@ -17,6 +17,17 @@ d'installer les paquets suivants :
 bash$ sudo apt-get install qemu-system-x86 qemu-kvm gcc-multilib make git
 bash$ git clone https://github.com/agantet/secos-ng
 ```
+
+Alternativement, il est possible de compiler et exécuter le TP dans un
+environnement Docker :
+
+```bash
+bash$ docker build -t secos-ng .
+bash$ docker run --rm -it --name secos-ng -v "${PWD}:/root/secos-ng" secos-ng
+```
+
+Les fichiers du TP peuvent alors être modifiés sur la machine hôte et seront
+directement accessible dans le conteneur Docker dans le dossier `~/secos-ng`
 
 ## Organisation du projet
 
