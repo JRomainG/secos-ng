@@ -27,7 +27,14 @@ bash$ docker run --rm -it --name secos-ng -v "${PWD}:/root/secos-ng" secos-ng
 ```
 
 Les fichiers du TP peuvent alors être modifiés sur la machine hôte et seront
-directement accessible dans le conteneur Docker dans le dossier `~/secos-ng`
+directement accessible dans le conteneur Docker dans le dossier `~/secos-ng`.
+
+Lorsque le conteneur est en cours d'exécution, il est possible d'ouvrir un shell
+supplémentaire en exécutant la commande suivante :
+
+```bash
+bash$ docker exec -ti secos-ng bash -l
+```
 
 ## Organisation du projet
 
